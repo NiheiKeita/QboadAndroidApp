@@ -19,7 +19,7 @@ class LoginActivity : BaseActivity() {
         setContentView(R.layout.activity_login)
 
         findViewById<TextView>(R.id.login_button).setOnClickListener {
-            Log.e("s", "start")
+            Log.e(TAG, "start")
             rxQBoadRestInterface.sendLogin()
 //            rxQBoadRestInterface.sendLogin("Bearer $apiAccessToken")
                 .subscribeOn(Schedulers.io())
